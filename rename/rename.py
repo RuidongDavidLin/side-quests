@@ -11,7 +11,7 @@ for i in f:
     oldname=path+f[n]
     
     #设置新文件名
-    newname=path+'mirinda'+ str('%05d.jpg' %n)
+    newname=path+'water'+ str('%05d.jpg' %n)
     
     #用os模块中的rename方法对文件改名
     os.rename(oldname,newname)
