@@ -1,7 +1,7 @@
 if __name__ == '__main__':
     import cv2
     print('请输入要保存的视频的名字:', end="")
-    name = input() + '.mkv'
+    name = input() + '.mp4'
     # 对视频设置的编码解码的方式MPEG-4编码
     fource = cv2.VideoWriter_fourcc(*'DIVX')
     # 采用摄像头采集图像
