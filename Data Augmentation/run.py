@@ -41,7 +41,7 @@ for img_name in img_list:
     # 显示增强后的图像，按q退出
     # cv2.imshow('MSRCR retinex', img_msrcr)
     # 将numpy数组处理后进行保存
-    img_msrcr = Image.fromarray(img_msrcr)
+    # img_msrcr = Image.fromarray(img_msrcr)
     img_msrcr.save(os.path.join(save_path, img_name.replace('.', '_msrcr.')))
 
     print('amsrcr processing......')
@@ -53,7 +53,7 @@ for img_name in img_list:
     # 显示增强后的图像，按q退出
     # cv2.imshow('autoMSRCR retinex', img_amsrcr)
     # 将numpy数组处理后进行保存
-    img_amsrcr = Image.fromarray(img_amsrcr)
+    # img_amsrcr = Image.fromarray(img_amsrcr)
     img_amsrcr.save(os.path.join(save_path, img_name.replace('.', '_amsrcr.')))
 
     print('msrcp processing......')
@@ -66,7 +66,7 @@ for img_name in img_list:
     )
 
     shape = img.shape
-    img_msrcp = Image.fromarray(img_msrcp)
+    # img_msrcp = Image.fromarray(img_msrcp)
     # cv2.imshow('MSRCP', img_msrcp)
     img_msrcp.save(os.path.join(save_path, img_name.replace('.', '_msrcp.')))
     cv2.waitKey()
