@@ -13,18 +13,19 @@ for xmlFile in files:
         dom = xml.dom.minidom.parse(file_path + xmlFile)
         # print(dom)
         root = dom.documentElement
-        newfilename = root.getElementsByTagName('filename')
-        newfilename[0].firstChild.data = newfilename[0].firstChild.data.replace('jpeg', 'jpg')
+        newfilename = root.getElementsByTagName('object')
+        print(newfilename)
+        # newfilename[0].firstChild.data = newfilename[0].firstChild.data.replace('jpeg', 'jpg')
         # print(newfilename[0].firstChild.data)
         
-        newpath = root.getElementsByTagName('path')
-        newpath[0].firstChild.data = newpath[0].firstChild.data.replace('jpeg', 'jpg')
-        print(newpath[0].firstChild.data)
-        # print(root.nodeName)
         # newpath = root.getElementsByTagName('path')
-        # newfilename = root.getElementsByTagName('filename')
-        # newfilename[0].firstChild.data = name1
-        with open(os.path.join(file_path, xmlFile), 'w', encoding='utf-8') as fh:
-            dom.writexml(fh)
+        # # newpath[0].firstChild.data = newpath[0].firstChild.data.replace('jpeg', 'jpg')
+        # print(newpath[0].firstChild.data)
+        # # print(root.nodeName)
+        # # newpath = root.getElementsByTagName('path')
+        # # newfilename = root.getElementsByTagName('filename')
+        # # newfilename[0].firstChild.data = name1
+        # with open(os.path.join(file_path, xmlFile), 'w', encoding='utf-8') as fh:
+        #     dom.writexml(fh)
             #print('写入name/pose OK!')
         count = count + 1
